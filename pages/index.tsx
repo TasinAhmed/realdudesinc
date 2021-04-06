@@ -1,5 +1,11 @@
+import { Layout } from "@components/templates";
+
 const Home: React.FC = () => {
-  return <p>Next.js Template</p>;
+  return (
+    <>
+      <Layout>Hello</Layout>
+    </>
+  );
 };
 
 export default Home;
