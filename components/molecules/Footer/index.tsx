@@ -1,30 +1,17 @@
 import { Container } from "@components/atoms";
 import styled from "styled-components";
-
-const TopBorder = styled.div`
-  height: 4px;
-  background-color: ${({ theme }) => theme.colors["orange-500"]};
-`;
-
-const BorderShadow = styled.div`
-  height: 5.3rem;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: radial-gradient(
-    111.86% 111.86% at 50% -11.86%,
-    rgba(244, 96, 54, 0.5) 0%,
-    rgba(139, 133, 193, 0) 100%
-  );
-  mix-blend-mode: normal;
-`;
+import DiscordBox from "../DiscordBox";
 
 const FooterStyles = styled.footer`
+  border-top: 4px solid ${({ theme }) => theme.colors["orange-500"]};
   background-color: ${({ theme }) => theme.colors["purple-700"]};
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   position: relative;
+  background: url("images/footer/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
 `;
 
 const FooterContainer = styled(Container)`
@@ -55,12 +42,16 @@ const FooterCell = styled.div`
   }
 `;
 
+const DsContainer = styled.div`
+  height: 100%;
+  display: grid;
+  align-items: center;
+`;
+
 const Footer = () => {
   return (
     <>
-      <TopBorder />
       <FooterStyles>
-        <BorderShadow />
         <FooterContainer>
           <FooterCell>
             <FooterTitle>RealDudesinc</FooterTitle>
@@ -87,7 +78,9 @@ const Footer = () => {
             <FooterLink>marketing partnership</FooterLink>
           </FooterCell>
           <FooterCell>
-            <FooterTitle>Hello</FooterTitle>
+            <DsContainer>
+              <DiscordBox />
+            </DsContainer>
           </FooterCell>
         </FooterContainer>
       </FooterStyles>

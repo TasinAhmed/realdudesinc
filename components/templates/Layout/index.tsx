@@ -12,6 +12,7 @@ const LayoutNavbar = styled(Navbar)`
 `;
 
 const LayoutChildren = styled.div`
+  margin-top: 8rem;
   flex: 1 1 auto;
 `;
 

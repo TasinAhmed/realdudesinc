@@ -1,3 +1,4 @@
+import { Layout } from "@components/templates";
 import { ThemeProvider } from "styled-components";
 import { theme, GlobalStyle } from "styles";
 
@@ -6,7 +7,9 @@ export default function App({ Component, pageProps }) {
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </>
   );
