@@ -1,4 +1,4 @@
-import { Container, Input } from "@components/atoms";
+import { Button, Container, Input } from "@components/atoms";
 import styled from "styled-components";
 
 const Main = styled.div`
@@ -25,6 +25,7 @@ const RegisterBox = styled.div`
 
 const ContentBox = styled.div`
   padding: 8rem 5rem;
+  position: relative;
 `;
 
 const Title = styled.div`
@@ -102,6 +103,13 @@ const ImgText = styled.div`
   bottom: 2rem;
 `;
 
+const SubmitBtn = styled(Button)`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+`;
+
 const Register: React.FC = () => {
   return (
     <Main>
@@ -145,6 +153,9 @@ const Register: React.FC = () => {
                   <span>Privacy Policy</span>
                 </p>
               </Policy>
+              <SubmitBtn size="large" type="submit">
+                grant access
+              </SubmitBtn>
             </form>
           </ContentBox>
         </RegisterBox>

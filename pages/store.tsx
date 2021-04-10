@@ -1,4 +1,5 @@
 import { Container } from "@components/atoms";
+import Pagination from "@components/atoms/Pagination";
 import { DiscordBox } from "@components/molecules";
 import GameCard from "@components/molecules/GameCard";
 import styled from "styled-components";
@@ -47,12 +48,18 @@ const StoreNav = styled.div`
 const Grid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 4rem;
+  grid-gap: 3rem;
+  margin-bottom: 5rem;
 `;
 
 const StoreContainer = styled(Container)`
   z-index: 10;
   position: relative;
+`;
+
+const PaginationContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const Store = () => {
@@ -63,7 +70,7 @@ const Store = () => {
           <Title>the store</Title>
           <DSBox />
         </Header>
-        <StoreNav>Hello</StoreNav>
+        <StoreNav>&nbsp;</StoreNav>
         <Grid>
           <GameCard />
           <GameCard />
@@ -84,6 +91,9 @@ const Store = () => {
           <GameCard />
           <GameCard />
         </Grid>
+        <PaginationContainer>
+          <Pagination />
+        </PaginationContainer>
       </StoreContainer>
     </Main>
   );
